@@ -1,0 +1,53 @@
+{
+  "name": "stormbringer",
+  "version": "1.0.0",
+  "description": "Ludum Dare 55 entry",
+  "license": "Proprietary",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "yarn envWeb && yarn build && gh-pages -d dist",
+    "ios": "yarn envIos && yarn build && npx cap copy ios && npx cap run ios",
+    "envWeb": "cp envs/web.env .env.production",
+    "envIos": "cp envs/ios.env .env.production"
+  },
+  "contributors": [
+    {
+      "name": "Nick Breslin",
+      "email": "nickbreslin@gmail.com"
+    }
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/slybootsstudio/"
+  },
+  "dependencies": {
+    "alea": "^1.0.1",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.2",
+    "bootswatch": "^5.3.3",
+    "core-js": "^3.34.0",
+    "@popperjs/core":"^2.11.8",
+    "vue": "^3.0.0",
+    "vue-router": "^4.3.0",
+    "vue-uuid": "^3.0.0",
+    "vuex": "^4.1.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-plugin-vuex": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.0.11",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "7.32.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "gh-pages": "^6.1.0",
+    "prettier": "^2.3.0"
+  }
+}
